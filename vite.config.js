@@ -12,12 +12,12 @@ export default defineConfig({
         port: 3001,
         // what this does is that whenever the client hits /api/jobs, it's really going to hit
         // localhost:8001/procedures
-        proxy: {
-            '/api': {
-                target: 'http://localhost:8001',
-                changeOrigin: true,
-                rewrite: (path) => path.replace(/^\/api/, ''),
-            }
-        }
+        // proxy: {
+        //     '/api': {
+        //         target: 'http://localhost:8001',
+        //         changeOrigin: true,
+        //         rewrite: (path) => path.replace(/^\/api/, ''),
+        //     }
+        // }
     }
 })

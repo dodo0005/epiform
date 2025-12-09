@@ -9,7 +9,7 @@ const Hero = ({ onNavigateContact }) => {
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-6">
                         <h1 className="text-indigo-600 mb-4 font-bold">Welcome to EPITA Kremlin-Bicêtre! 🇫🇷</h1>
                         <p className="text-gray-700 mb-4 leading-relaxed">
-                            This comprehensive guide will help you navigate the essential procedures for settling in France as an international EPITA student.
+                            This comprehensive EPITA International Student Guide will help you navigate the essential procedures for settling in France as an international EPITA student.
                             We've organized everything you need to know into clear categories, from mandatory administrative tasks to helpful recommendations
                             that will make your transition smoother.
                         </p>

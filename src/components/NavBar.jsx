@@ -29,7 +29,7 @@ const Navbar = ({ onNavigateHome, onNavigateContact }) => {
                                 src={logo}
                                 alt="React Jobs"
                             />
-                            <h2 className="text-gray-100 ml-1 font-mono">EPITA Intl. Student Guide</h2>
+                            <h2 className="text-gray-100 ml-1 font-mono">epiform</h2>
                         </a>
                     </div>
 
