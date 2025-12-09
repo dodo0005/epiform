@@ -73,7 +73,7 @@ function App() {
                 icon: 'graduation-cap',
                 label: 'Academic',
                 description: 'Finalize your academic registration and pay the mandatory Campus and Student Life Contribution.',
-                shortSummary: 'Complete enrollment and pay €100 CVEC fee',
+                shortSummary: 'Complete enrollment and pay €100-110 CVEC fee',
                 status: 'todo',
                 category: 'obligatory',
                 prerequisites: [],
@@ -350,8 +350,6 @@ function App() {
                     steps: [
                         'Prepare a recent passport-style photo (digital or printed)',
                         'Go to any major metro or RER station ticket counter (guichet)',
-                        'Request a Navigo Découverte card (if under 26, mention you want Imagine R)',
-                        'Pay the €5 one-time card fee',
                         'Fill out the application form with your name and photo',
                         'Choose your subscription type: Imagine R (under 26), weekly, monthly, or annual, always check for any discounts, and how to fulfill them.',
                         'If choosing Imagine R, provide student certificate',
@@ -373,12 +371,11 @@ function App() {
                     tips: [
                         'If you\'re under 26, Imagine R is the best deal at ~€40/month for all zones',
                         'Annual Imagine R subscription offers 2 months free',
-                        'If over 26, consider the weekly Navigo (€30.75 for zones 1-5) if you won\'t use it daily',
+                        'If over 26, consider the weekly Navigo if you won\'t use it daily',
                         'You can reload online or at stations - set up automatic recharge to avoid forgetting',
                         'Always carry your Navigo - inspectors fine heavily for fare dodging (€50+)',
                         'The card is transferable between types of subscriptions',
                         'Monthly Navigo can only be loaded from the 20th of the previous month',
-                        'Keep your Navigo safe - replacements cost €5',
                         'Night buses (Noctilien) are included in your Navigo subscription'
                     ]
                 }
