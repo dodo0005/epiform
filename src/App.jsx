@@ -578,7 +578,7 @@ function App() {
                 "description": "Get complementary health insurance to cover the remaining 30% of medical costs.",
                 "shortSummary": "Covers remaining costs and hospitalization",
                 "status": "todo",
-                "category": "recommended",
+                "category": "highly-recommended",
                 "prerequisites": ["3", "4"],
                 "detailedInfo": {
                     "overview": "Social Security covers about 70% of standard medical costs. A 'Mutuelle' (Complementary Health Insurance) covers the remaining 30% (ticket modérateur) and can cover expensive items like dental, optical, and hospitalization which are poorly reimbursed by the state.",
