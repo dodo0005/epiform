@@ -12,9 +12,14 @@ import {
     Link
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from "react";
+
 
 const ProcedureDetail = ({ procedure, allProcedures, onStatusChange }) => {
     const navigate = useNavigate();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const categoryInfo = {
 
         'obligatory': { color: 'red', label: 'Obligatory', emoji: '⚠️' },
