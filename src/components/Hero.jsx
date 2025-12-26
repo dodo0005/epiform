@@ -1,6 +1,8 @@
-import { AlertTriangle, Phone } from 'lucide-react'
+import { AlertTriangle, Phone, ArrowLeft  } from 'lucide-react'
 
+import { useNavigate } from 'react-router-dom';
 const Hero = ({ onNavigateContact }) => {
+    const navigate = useNavigate();
     return (
         <>
             <div className="bg-gradient-to-r from-indigo-50 to-indigo-100 pt-20 pb-10">
@@ -36,7 +38,7 @@ const Hero = ({ onNavigateContact }) => {
                                 </p>
                                 <section className="m-auto max-w-lg px-1">
                                 <a
-                                    onClick={onNavigateContact}
+                                    onClick={()=> navigate('/contact')}
                                     className="flex justify-center items-center gap-2 bg-orange-950 text-orange-50 shadow-md font-semibold text-center py-3 px-6 rounded-xl hover:bg-orange-900 cursor-pointer"
                                 >
                                     <Phone className="w-5 h-5 text-red-600" />
