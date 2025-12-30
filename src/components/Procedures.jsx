@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { useState, useRef } from "react";
+import {useState, useRef, useEffect} from "react";
 import { CheckCircle2, ChevronDown, ChevronUp, ArrowRight, OctagonAlert, Sparkle, ClipboardList, ArrowLeft } from 'lucide-react';
 import ProcedureCard from './ProcedureCard';
 import { useNavigate } from 'react-router-dom';
-const Dashboard = ({ procedures, onStatusChange, onNavigateToProcedure, firstObligatoryProcedure }) => {
+const Dashboard = ({ procedures, onStatusChange, firstObligatoryProcedure }) => {
     const [expandedCategory, setExpandedCategory] = useState(() => {
     return sessionStorage.getItem('expandedCategory') || 'obligatory';
 });
@@ -50,22 +50,26 @@ const Dashboard = ({ procedures, onStatusChange, onNavigateToProcedure, firstObl
         }
     };
 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <div className="bg-gradient-to-r from-indigo-50 to-indigo-100 pb-16 pt-20">
                 
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div>
                         <button
                         onClick={goBack}
-                        className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 transition-colors"
+                        className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 transition-colors cursor-pointer"
                         >
                         <ArrowLeft className="w-4 h-4" />
-                        Back to dashboard
+                        Back
                         </button>
                     </div>
                    <div className="text-center mb-10">
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-indigo-700 mb-4">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0033CC] dark:text-[#4F95FF] mb-4">
                         Procedures
                     </h1>
                     <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">

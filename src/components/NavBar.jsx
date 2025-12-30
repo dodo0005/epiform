@@ -1,14 +1,10 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import { NavLink } from 'react-router-dom';  // allows for active link style css
 import logo from '../assets/images/logo.svg'
 import { Home, Phone, Menu, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const Navbar = ({ onNavigateHome, onNavigateContact }) => {
-    // const linkClass = ({ isActive }) =>
-    //     isActive
-    //         ? 'text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
-    //         : 'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+const Navbar = () => {
     const navigate = useNavigate();
 
     const navigateHome = () => {
@@ -20,9 +16,9 @@ const Navbar = ({ onNavigateHome, onNavigateContact }) => {
         }
     return (
         <nav
-            className="fixed top-0 left-0 right-0 bg-indigo-700 border-b border-blue-500 shadow-sm z-50 transition-transform duration-300"
+            className="fixed top-0 left-0 right-0 bg-[#0033CC] border-b border-blue-500 shadow-sm z-50 transition-transform duration-300"
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center gap-6">
                         {/*<button*/}
@@ -32,28 +28,30 @@ const Navbar = ({ onNavigateHome, onNavigateContact }) => {
                         {/*    /!*{sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}*!/*/}
                         {/*</button>*/}
 
-                        <a className="flex flex-shrink-0 items-center mr-4" href="/">
+                        <Link to="/" className="flex flex-shrink-0 items-center mr-4">
                             <img
-                                className="h-10 w-auto"
+                                className="h-10 w-auto "
                                 src={logo}
-                                alt="React Jobs"
+                                alt="/"
                             />
                             <h2 className="text-gray-100 ml-1 font-mono">epiform</h2>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="flex items-center gap-4">
+                        {/* Home Navigate */}
                         <button
                             onClick={navigateHome}
-                            className="flex items-center gap-2 px-4 py-2 rounded-lg text-gray-100 hover:bg-indigo-600 transition-colors cursor-pointer"
+                            className="flex items-center gap-2 px-4 py-2 rounded-lg text-gray-100 hover:bg-[#002299] transition-colors cursor-pointer"
                         >
                             <Home className="w-5 h-5" />
                             <span className="hidden sm:inline font-mono">Home</span>
                         </button>
 
+                        {/* Contact Navigate */}
                         <button
                             onClick={()=> navigate('/contact')}
-                            className="flex items-center gap-2 px-4 py-2 rounded-lg text-gray-100 hover:bg-indigo-600 transition-colors cursor-pointer"
+                            className="flex items-center gap-2 px-4 py-2 rounded-lg text-gray-100 hover:bg-[#002299] transition-colors cursor-pointer"
                         >
                             <Phone className="w-5 h-5" />
                             <span className="hidden sm:inline font-mono">Contact Us</span>
