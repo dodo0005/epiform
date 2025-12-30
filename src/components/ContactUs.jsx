@@ -1,7 +1,12 @@
 import { Mail, Phone, MapPin, Clock, MessageCircle, ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import {useEffect} from "react";
 const ContactUs = () => {
     const navigate = useNavigate();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
     const goBack = () => {
         if (window.history.length > 1) {
@@ -13,30 +18,30 @@ const ContactUs = () => {
     return (
         <div className="bg-gradient-to-r from-indigo-50 to-indigo-100">
             {/* Header */}
-<div className="bg-white border-b border-gray-200 shadow-sm">
-    <div className="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8 py-6">
-  {/* Back button flush left */}
-  <div>
-    <button
-      onClick={goBack}
-      className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 transition-colors"
-    >
-      <ArrowLeft className="w-4 h-4" />
-      Back to dashboard
-    </button>
-  </div>
+            <div className="bg-white border-b border-gray-200 shadow-sm">
+              <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 py-6">
+                {/* Back button flush left */}
+                <div>
+                  <button
+                    onClick={goBack}
+                    className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 transition-colors cursor-pointer"
+                  >
+                    <ArrowLeft className="w-4 h-4" />
+                    Back
+                  </button>
+                </div>
 
-    {/* Centered header */}
-    <div className="text-center mt-6">
-    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-indigo-700 mb-4">
-      Contact Us
-    </h1>
-    <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-      We're here to help students like you settle in Paris. Notify us immediately if you find any outdated information.
-    </p>
-  </div>
-</div>
-</div>
+                {/* Centered header */}
+                <div className="text-center mt-6">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-indigo-700 mb-4">
+                    Contact Us
+                  </h1>
+                  <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                    We're here to help students like you settle in Paris. Notify us immediately if you find any outdated information.
+                  </p>
+                </div>
+              </div>
+            </div>
 
 
             {/* Content */}

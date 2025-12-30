@@ -71,6 +71,7 @@ function App() {
     //     return defaultData;
     // });
 
+    // handlesStatusChange(...) runs before useEffect here
     // Save progress to localStorage whenever it changes
     useEffect(() => {
         const progressData = {};
@@ -98,14 +99,10 @@ function App() {
                     <Route path="/" element={
                         <>
                             <Hero />
-                            <Dashboard
-                                procedures={procedures}
-                                onStatusChange={handleStatusChange}
-                                firstObligatoryProcedure={firstObligatoryProcedure}
-                            />
+                            <Dashboard />
                         </>
                     } />
-                     {/* Home Route */}
+                     {/* Procedures Route */}
                     <Route path="/procedures" element={
                         <>
                             <Procedures
@@ -137,8 +134,6 @@ function ProcedureRouteWrapper({ procedures, onStatusChange }) {
     const { slug } = useParams();
     const procedure = procedures.find(p => p.slug === slug);
 
-    // IBAAD! This is where you will use <NotFound />; In this if statement
-    // delete this and above comment once completed
     if (!procedure) return <div>Procedure not found</div>;
 
     return (

@@ -83,6 +83,7 @@ const ProcedureDetail = ({ procedure, allProcedures, onStatusChange }) => {
                             )}
                         </div>
 
+                        {/* Toggle Status (Mark Done) */}
                         <button
                             onClick={toggleStatus}
                             className={`flex items-center gap-2 px-4 py-2 rounded-lg border-2 transition-all hover:scale-105 ${
